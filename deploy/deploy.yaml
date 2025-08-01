@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: demo-app
-        image: mangesh4150/wheather-app:v20250105121337
+        image: mangesh4150/wheather-app:v20250801061044
         ports:
         - containerPort: 5000
