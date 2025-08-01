@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths:
-      - deploy
+      - '**/*'
 
 jobs:
   build:
@@ -71,7 +71,7 @@ jobs:
           git config --global user.name "mangeshvzt"
           git add deploy/deploy.yaml
           git commit -m "Update deploy.yaml with new image version - ${{ env.VERSION }}"
-          git remote set-url origin https://mangeshvzt:${{ secrets.GITHUB_TOKEN }}@github.com/mangesh4150/Flask-App-GitHub-Actions-ArgoCD.git
+          git remote set-url origin https://github-actions:${{ secrets.GITHUB_TOKEN }}@github.com/mangeshvzt/Flask-App-GitHub-Actions-ArgoCD.git
           git push origin master
 
       
